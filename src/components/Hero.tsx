@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, MessageCircle } from 'lucide-react';
+import { ArrowRight, Shield, MessageCircle, QrCode } from 'lucide-react';
+import heroImage from '../assets/images/dogs-hero.png';
 
 export const Hero: React.FC = () => {
   return (
@@ -16,15 +17,15 @@ export const Hero: React.FC = () => {
           {/* Content */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Tu mascota,{' '}
-              <span className="text-green-600">segura</span>.{' '}
+              <span className="text-blue-600">Conectados</span>
+              <QrCode className="inline-block ml-2 text-blue-600" size={48} />{' '}
+              por el bienestar de tu{' '}
               <br className="hidden lg:block" />
-              Vos,{' '}
-              <span className="text-blue-600">tranquilo</span>.
+              <span className="text-green-600">mascota</span>.
             </h1>
             
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
-              Colgantes QR inteligentes + consultas veterinarias por IA en WhatsApp. 
+              Un QR que protege, una IA que responde. 
               La tranquilidad que buscás para cuidar a quien más querés.
             </p>
 
@@ -63,8 +64,8 @@ export const Hero: React.FC = () => {
           <div className="relative">
             <div className="relative z-10 bg-white rounded-2xl shadow-2xl p-8 transform rotate-1 hover:rotate-0 transition-transform duration-500">
               <img
-                src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Mascota feliz con collar inteligente"
+                src={heroImage}
+                alt="Dos perritos golden retriever con collares QR"
                 className="w-full h-80 object-cover rounded-xl"
               />
               <div className="absolute -top-4 -right-4 bg-green-600 text-white p-3 rounded-full shadow-lg">

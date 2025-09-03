@@ -69,4 +69,25 @@ src/
 
 El sitio puede desplegarse en cualquier provider que soporte sitios estáticos (Vercel, Netlify, etc.).
 
+### Despliegue con Docker
+
+El proyecto incluye un Dockerfile para facilitar el despliegue en entornos containerizados:
+
+```bash
+# Construir la imagen
+docker build -t afpets-frontend .
+
+# Ejecutar el contenedor
+docker run -p 80:80 afpets-frontend
+```
+
+### Despliegue en Easypanel
+
+1. En Easypanel, crea un nuevo servicio
+2. Selecciona la opción de despliegue desde GitHub
+3. Proporciona la URL del repositorio: `https://github.com/afpets-ar/upets-bolt`
+4. Selecciona la opción de Dockerfile cuando aparezca en la pantalla de configuración
+5. Configura las variables de entorno necesarias (ver `.env.example`)
+6. Inicia el despliegue
+
 Ver `INTEGRACION_WORDPRESS.md` para configurar la conexión con WordPress.
